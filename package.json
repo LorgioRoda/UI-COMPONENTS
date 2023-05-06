@@ -1,6 +1,6 @@
 {
   "name": "ui-components-lr",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Library for fun",
   "main": "./dist/index.js",
   "scripts": {
