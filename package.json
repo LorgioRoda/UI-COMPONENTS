@@ -1,6 +1,6 @@
 {
   "name": "ui-components-lr",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Library for fun",
   "main": "./dist/index.js",
   "scripts": {
@@ -11,10 +11,13 @@
     "build": "NODE_ENV=production && rm -rf ./dist && mkdir dist && npx babel --config-file ./babel.config.js src/ --out-dir dist --copy-files --ignore '**/*.spec.js' --no-copy-ignored",
     "test": "jest --config ./config/jest.config.js"
   },
-    "publishConfig": {
+  "publishConfig": {
     "access": "public"
   },
-  "keywords": ["library-ui", "react"],
+  "keywords": [
+    "library-ui",
+    "react"
+  ],
   "author": "Lorgio Roda",
   "license": "ISC",
   "dependencies": {
