@@ -1,10 +1,10 @@
 {
   "name": "ui",
-  "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
+  "version": "0.1.0",
+  "description": "Library for fun",
+  "main": "./dist/index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "NODE_ENV=production && rm -rf ./dist && mkdir dist && npx babel --config-file ./bable.config.js src/ --out-dir dist --copy-files --ignore '**/*.spec.js' --no-copy-ignored",
     "test": "jest --config ./config/jest.config.js"
   },
   "author": "",
