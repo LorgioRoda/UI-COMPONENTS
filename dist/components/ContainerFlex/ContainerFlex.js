@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports["default"]=void 0;var _jsxRuntime=require("react/jsx-runtime"),ContainerFlex=function(){return/*#__PURE__*/(0,_jsxRuntime.jsx)("section",{})},_default=ContainerFlex;exports["default"]=_default;
