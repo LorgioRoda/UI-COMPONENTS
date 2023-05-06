@@ -4,10 +4,18 @@
   "description": "Library for fun",
   "main": "./dist/index.js",
   "scripts": {
+    "release": "npm run build && npm publish",
+    "release:patch": "npm version patch && npm run release",
+    "release:minor": "npm version minor && npm run publish",
+    "release:major": "npm version major && npm run publish",
     "build": "NODE_ENV=production && rm -rf ./dist && mkdir dist && npx babel --config-file ./bable.config.js src/ --out-dir dist --copy-files --ignore '**/*.spec.js' --no-copy-ignored",
     "test": "jest --config ./config/jest.config.js"
   },
-  "author": "",
+    "publishConfig": {
+    "access": "public"
+  },
+  "keywords": ["library-ui", "react"],
+  "author": "Lorgio Roda",
   "license": "ISC",
   "dependencies": {
     "@emotion/css": "^11.10.8"
