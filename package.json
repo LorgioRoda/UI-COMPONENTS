@@ -1,5 +1,5 @@
 {
-  "name": "ui",
+  "name": "ui-components-lr",
   "version": "0.1.0",
   "description": "Library for fun",
   "main": "./dist/index.js",
