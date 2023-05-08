@@ -1,6 +1,16 @@
-import { forwardRef } from 'react'
 import { cx, css } from '@emotion/css'
-import { PropTypes } from 'prop-types'
+import * as React from 'react';
+
+interface ButtonProps {
+  bgColor?: string,
+  color?: string,
+  borderRadius?: string,
+  width?: string,
+  height?: string,
+  colorHover?: string,
+  bgColorHover?: string,
+  className?: string
+}
 
 const buttonStyles = (bgColor, color, width, height, bgColorHover, colorHover, borderRadius) => css`
   background-color: ${bgColor};
@@ -15,7 +25,7 @@ const buttonStyles = (bgColor, color, width, height, bgColorHover, colorHover, b
   }
 `
 
-const Button = forwardRef((props, ref) => {
+const Button = ({...props}: ButtonProps) => {
   const {
     className,
     bgColor,
@@ -24,28 +34,13 @@ const Button = forwardRef((props, ref) => {
     height,
     bgColorHover,
     colorHover,
-    borderRadius,
-    ...otherProps } = props;
-  return(
+    borderRadius } = props;
+  return (
     <button
-      ref={ref}
       type="button"
-      {...otherProps}
       className={cx(buttonStyles(bgColor, color, width, height, bgColorHover, colorHover, borderRadius), className)}
-    />
+      />
   )
-});
-
-Button.PropTypes = {
-  className: PropTypes.string,
-  bgColor: PropTypes.string,
-  color: PropTypes.string,
-  width: PropTypes.string,
-  height: PropTypes.string,
-  bgColorHover: PropTypes.string,
-  colorHover: PropTypes.string,
-  borderRadius: PropTypes.string,
-
 }
 
 export default Button;

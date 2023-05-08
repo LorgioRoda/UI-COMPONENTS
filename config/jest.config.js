@@ -3,5 +3,9 @@ module.exports = {
   testPathIgnorePatterns: ['<rootDir>/node_modules/'],
   setupFilesAfterEnv: ['<rootDir>/config/test.config.js'],
   testEnvironment: 'jsdom',
-  modulePathIgnorePatterns: ['dist']
+  modulePathIgnorePatterns: ['dist'],
+    transform: {
+    "^.+\\.tsx?$": "ts-jest"
+  },
+  moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"]
 };

@@ -9,7 +9,8 @@
     "release:minor": "npm version minor && npm publish",
     "release:major": "npm version major && npm publish",
     "build": "NODE_ENV=production && rm -rf ./dist && mkdir dist && npx babel --config-file ./babel.config.js src/ --out-dir dist --copy-files --ignore '**/*.spec.js' --no-copy-ignored",
-    "test": "jest --config ./config/jest.config.js"
+    "test": "jest --config ./config/jest.config.js",
+    "test:watch": "jest --watch"
   },
   "publishConfig": {
     "access": "public"
@@ -21,7 +22,9 @@
   "author": "Lorgio Roda",
   "license": "ISC",
   "dependencies": {
-    "@emotion/css": "^11.10.8"
+    "@emotion/css": "^11.10.8",
+    "@types/jest": "^29.5.1",
+    "ts-jest": "^29.1.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.6",
@@ -32,13 +35,19 @@
     "@babel/preset-react": "^7.16.7",
     "@jest/globals": "^29.5.0",
     "@testing-library/dom": "^8.11.3",
-    "@testing-library/jest-dom": "^5.16.2",
-    "@testing-library/react": "^12.0.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^12.1.5",
+    "@types/react": "^17.0.59",
+    "@types/react-dom": "^17.0.20",
     "babel-loader": "^8.2.3",
     "babel-preset-minify": "^0.5.1",
-    "jest": "^27.5.1",
+    "jest": "^29.5.0",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "typescript": "^5.0.4"
+  },
+  "transform": {
+    "\\.js$": "<rootDir>/node_modules/babel-jest"
   }
 }
