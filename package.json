@@ -5,11 +5,10 @@
   "main": "./dist/index.js",
   "scripts": {
     "release": "npm run build && npm publish",
-    "release:patch": "npm version patch && npm release",
-    "release:minor": "npm version minor && npm publish",
-    "release:major": "npm version major && npm publish",
-    "build": "NODE_ENV=production && rm -rf ./dist && mkdir dist && npx babel --config-file ./babel.config.js src/ --out-dir dist --copy-files --ignore '**/*.spec.js' --no-copy-ignored",
-    "test": "jest --config ./config/jest.config.js"
+    "release:patch": "npm version patch && npm run release",
+    "release:minor": "npm version minor && npm run publish",
+    "release:major": "npm version major && npm run publish",
+    "build": "NODE_ENV=production && rm -rf ./dist && mkdir dist && npx babel --config-file ./babel.config.js src/ --out-dir dist --copy-files --ignore '**/*.spec.js' --no-copy-ignored"
   },
   "publishConfig": {
     "access": "public"
@@ -21,7 +20,7 @@
   "author": "Lorgio Roda",
   "license": "ISC",
   "dependencies": {
-    "@emotion/css": "^11.10.8"
+    "@emotion/css": "^11.7.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.6",
@@ -30,13 +29,13 @@
     "@babel/plugin-transform-runtime": "^7.17.0",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
-    "@jest/globals": "^29.5.0",
     "@testing-library/dom": "^8.11.3",
     "@testing-library/jest-dom": "^5.16.2",
-    "@testing-library/react": "^12.0.0",
+    "@testing-library/react": "^12.1.4",
     "babel-loader": "^8.2.3",
     "babel-preset-minify": "^0.5.1",
     "jest": "^27.5.1",
+    "prettier": "^2.5.1",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"

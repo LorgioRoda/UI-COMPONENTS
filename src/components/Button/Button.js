@@ -16,7 +16,7 @@ const buttonStyles = (bgColor, color, width, height, bgColorHover, colorHover, b
 `
 
 const Button = forwardRef((props, ref) => {
-  const { 
+  const {
     className,
     bgColor,
     color,
